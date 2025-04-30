@@ -91,16 +91,16 @@
             <tr class="item">
                 <td>{{ item.description }}</td>
                 <td>{{ item.quantity }}</td>
-                <td>₹{{ item.unit_price }}</td>
-                <td>₹{{ item.discount }}</td>
-                <td>₹{{ item.net_amount }}</td>
+                <td>${{ item.unit_price }}</td>
+                <td>${{ item.discount }}</td>
+                <td>${{ item.net_amount }}</td>
                 <td>{{ item.tax_rate }}%</td>
-                <td>₹{{ item.total_amount }}</td>
+                <td>${{ item.total_amount }}</td>
             </tr>
             {% endfor %}
             <tr class="total">
                 <td colspan="6" style="text-align: right;">Total:</td>
-                <td>₹{{ total_amount }}</td>
+                <td>${{ total_amount }}</td>
             </tr>
         </table>
         
