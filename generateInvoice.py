@@ -65,12 +65,12 @@ billing_details = {
 }
 
 invoice_details = {
-    "invoice_no": "INV-001",
+    "invoice_no": "INV-002",
     "invoice_date": "2025-07-01"
 }
 
 items = [
     {"description": "Business Strategy Consultation - Hourly", "unit_price": 120, "quantity": 10, "discount": 0, "tax_rate": 10},
-    {"description": "Leadership Training and Coaching", "unit_price": 350, "quantity": 4, "discount": 0, "tax_rate": 10}
+    {"description": "AAAAAAAAAAAAAAAA", "unit_price": 1, "quantity": 1, "discount": 0, "tax_rate": 10}
 ]
 generate_invoice(seller_details, billing_details, invoice_details, items)
