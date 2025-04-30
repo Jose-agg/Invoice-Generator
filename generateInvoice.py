@@ -10,7 +10,7 @@ def amount_in_words(amount):
     # Dummy implementation for the sake of example
     return f"{amount} US Dollars only"
 
-def generate_invoice(seller_details, billing_details, shipping_details, order_details, invoice_details, items, logo, signature):
+def generate_invoice(seller_details, billing_details, invoice_details, items):
     # Calculate derived parameters
     for item in items:
         item['net_amount'] = item['unit_price'] * item['quantity'] - item['discount']
@@ -29,13 +29,9 @@ def generate_invoice(seller_details, billing_details, shipping_details, order_de
     html_out = template.render(
         seller_details=seller_details,
         billing_details=billing_details,
-        shipping_details=shipping_details,
-        order_details=order_details,
         invoice_details=invoice_details,
         items=items,
         total_amount=format_currency(total_amount),
-        logo=os.path.abspath(logo),
-        signature=os.path.abspath(signature),
         amount_in_words=amount_in_words(total_amount)
     )
 
@@ -55,10 +51,8 @@ seller_details = {
     "name": " Strauss Consulting",
     "address": "Max-Joseph-Platz 2",
     "city": "München",
-    "state": "Seller State",
     "pincode": "80539",
-    "pan_no": "ABCDE1234F",
-    "gst_no": "12ABCDE3456F1Z7"
+    "country": "Germany"
 }
 
 billing_details = {
@@ -67,21 +61,7 @@ billing_details = {
     "city": "Atlanta",
     "state": "Georgia",
     "pincode": "31772",
-    "state_code": "12"
-}
-
-shipping_details = {
-    "name": "Buyer Name",
-    "address": "123 Buyer St",
-    "city": "Buyer City",
-    "state": "Buyer State",
-    "pincode": "654321",
-    "state_code": "12"
-}
-
-order_details = {
-    "order_no": "12345",
-    "order_date": "2025-07-01"
+    "country": "United States"
 }
 
 invoice_details = {
@@ -93,8 +73,4 @@ items = [
     {"description": "Business Strategy Consultation - Hourly", "unit_price": 120, "quantity": 10, "discount": 0, "tax_rate": 10},
     {"description": "Leadership Training and Coaching", "unit_price": 350, "quantity": 4, "discount": 0, "tax_rate": 10}
 ]
-
-logo = 'logo.png'
-signature = 'path/to/signature.png'
-
-generate_invoice(seller_details, billing_details, shipping_details, order_details, invoice_details, items, logo, signature)
+generate_invoice(seller_details, billing_details, invoice_details, items)
