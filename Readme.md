@@ -35,16 +35,7 @@ Ensure you have the following installed:
    pip install pdfkit jinja2 pyyaml
    ```
 
-3. Install wkhtmltopdf:
-   - **Ubuntu/Debian:**
-     ```bash
-     sudo apt-get install wkhtmltopdf
-     ```
-   - **macOS:**
-     ```bash
-     brew install wkhtmltopdf
-     ```
-   - **Windows:** Download and install from [wkhtmltopdf website](https://wkhtmltopdf.org/downloads.html).
+3. Download and install wkhtmltopdf from their official [website](https://wkhtmltopdf.org/downloads.html).
 
 ## Usage
 
