@@ -1,6 +1,7 @@
 import pdfkit
 from jinja2 import Environment, FileSystemLoader
 import os
+import yaml
 from pdfkit.configuration import Configuration
 
 def format_currency(value):
@@ -10,7 +11,7 @@ def amount_in_words(amount):
     # Dummy implementation for the sake of example
     return f"{amount} US Dollars only"
 
-def generate_invoice(seller_details, billing_details, invoice_details, items):
+def generate_invoice(seller_details, billing_details, invoice_details, items, output_path=None):
     # Calculate derived parameters
     for item in items:
         item['net_amount'] = item['unit_price'] * item['quantity'] - item['discount']
@@ -42,35 +43,64 @@ def generate_invoice(seller_details, billing_details, invoice_details, items):
         config = Configuration(wkhtmltopdf=wkhtmltopdf_path)
 
     # Generate PDF
-    pdfkit.from_string(html_out, 'invoice.pdf', options={
+    if output_path is None:
+        output_path = 'invoice.pdf'
+    
+    pdfkit.from_string(html_out, output_path, options={
         'enable-local-file-access': None
     }, configuration=config)
+    
+    print(f"Invoice PDF generated: {output_path}")
 
-# Sample data
-seller_details = {
-    "name": " Strauss Consulting",
-    "address": "Max-Joseph-Platz 2",
-    "city": "München",
-    "pincode": "80539",
-    "country": "Germany"
-}
+def process_invoice_file(yaml_file_path):
+    # Extract the file name without extension
+    file_name = os.path.basename(yaml_file_path)
+    invoice_name = os.path.splitext(file_name)[0]
+    
+    # Read YAML file
+    with open(yaml_file_path, 'r', encoding='utf-8') as file:
+        data = yaml.safe_load(file)
+    
+    # Define output PDF path
+    output_pdf_path = os.path.join('outputs', f"{invoice_name}.pdf")
+    
+    # Generate invoice
+    generate_invoice(
+        data['seller_details'], 
+        data['billing_details'], 
+        data['invoice_details'], 
+        data['items'],
+        output_pdf_path
+    )
+    
+    return output_pdf_path
 
-billing_details = {
-    "name": "Cronus International Ltd.",
-    "address": "7122 South Ashford Street",
-    "city": "Atlanta",
-    "state": "Georgia",
-    "pincode": "31772",
-    "country": "United States"
-}
+def process_all_invoices():
+    # Check if inputs directory exists
+    if not os.path.exists('inputs'):
+        print("Error: 'inputs' directory not found")
+        return
+    
+    # Create outputs directory if it doesn't exist
+    if not os.path.exists('outputs'):
+        os.makedirs('outputs')
+    
+    # Get list of YAML files
+    yaml_files = [f for f in os.listdir('inputs') if f.endswith(('.yaml', '.yml'))]
+    
+    if not yaml_files:
+        print("No YAML files found in the inputs directory")
+        return
+    
+    # Process each file
+    for yaml_file in yaml_files:
+        yaml_file_path = os.path.join('inputs', yaml_file)
+        try:
+            output_path = process_invoice_file(yaml_file_path)
+            print(f"Processed {yaml_file} -> {output_path}")
+        except Exception as e:
+            print(f"Error processing {yaml_file}: {str(e)}")
 
-invoice_details = {
-    "invoice_no": "INV-002",
-    "invoice_date": "2025-07-01"
-}
-
-items = [
-    {"description": "Business Strategy Consultation - Hourly", "unit_price": 120, "quantity": 10, "discount": 0, "tax_rate": 10},
-    {"description": "AAAAAAAAAAAAAAAA", "unit_price": 1, "quantity": 1, "discount": 0, "tax_rate": 10}
-]
-generate_invoice(seller_details, billing_details, invoice_details, items)
+# Main execution point
+if __name__ == "__main__":
+    process_all_invoices()
