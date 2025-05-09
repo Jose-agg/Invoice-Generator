@@ -1,0 +1,30 @@
+seller_details:
+  name: "Yet a New Vendor"
+  address: "Invented Avenue 1"
+  city: "Invented City"
+  pincode: "12345"
+  country: "Denmark"
+
+billing_details:
+  name: "Cronus International Ltd."
+  address: "7122 South Ashford Street"
+  city: "Atlanta"
+  state: "Georgia"
+  pincode: "31772"
+  country: "United States"
+
+invoice_details:
+  invoice_no: "DATA-002"
+  invoice_date: "2025-07-01"
+
+items:
+  - description: "Business Strategy Consultation - Hourly"
+    unit_price: 120
+    quantity: 10
+    discount: 0
+    tax_rate: 10
+  - description: "Leadership Training and Coaching"
+    unit_price: 350
+    quantity: 4
+    discount: 0
+    tax_rate: 10
