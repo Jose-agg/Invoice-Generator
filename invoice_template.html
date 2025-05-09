@@ -32,13 +32,9 @@
                 <td colspan="2">
                     <table>
                         <tr>
-                            <td class="title">
-                                <img src="{{ logo }}" style="width:100%; max-width:300px;">
-                            </td>
                             <td class="invoice-details">
                                 Invoice #: {{ invoice_details.invoice_no }}<br>
-                                Created: {{ invoice_details.invoice_date }}<br>
-                                Order #: {{ order_details.order_no }}
+                                Created: {{ invoice_details.invoice_date }}
                             </td>
                         </tr>
                     </table>
@@ -51,25 +47,14 @@
                             <td class="seller-details">
                                 <strong>Seller Name:</strong> {{ seller_details.name }}<br>
                                 <strong>Address:</strong> {{ seller_details.address }}<br>
-                                {{ seller_details.city }}, {{ seller_details.state }} {{ seller_details.pincode }}<br>
-                                <strong>PAN:</strong> {{ seller_details.pan_no }}<br>
-                                <strong>GST:</strong> {{ seller_details.gst_no }}
+                                {{ seller_details.city }}, {{ seller_details.pincode }}, {{ seller_details.country}}
                             </td>
                             <td class="buyer-details right-align">
                                 <strong>Billing To:</strong><br>
                                 {{ billing_details.name }}<br>
                                 {{ billing_details.address }}<br>
                                 {{ billing_details.city }}, {{ billing_details.state }} {{ billing_details.pincode }}<br>
-                                <strong>State Code:</strong> {{ billing_details.state_code }}
-                            </td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" class="right-align" style="padding-top: 20px;">
-                                <strong>Shipping To:</strong><br>
-                                {{ shipping_details.name }}<br>
-                                {{ shipping_details.address }}<br>
-                                {{ shipping_details.city }}, {{ shipping_details.state }} {{ shipping_details.pincode }}<br>
-                                <strong>State Code:</strong> {{ shipping_details.state_code }}
+                                {{ billing_details.country }}
                             </td>
                         </tr>
                     </table>
@@ -91,24 +76,18 @@
             <tr class="item">
                 <td>{{ item.description }}</td>
                 <td>{{ item.quantity }}</td>
-                <td>₹{{ item.unit_price }}</td>
-                <td>₹{{ item.discount }}</td>
-                <td>₹{{ item.net_amount }}</td>
+                <td>${{ item.unit_price }}</td>
+                <td>${{ item.discount }}</td>
+                <td>${{ item.net_amount }}</td>
                 <td>{{ item.tax_rate }}%</td>
-                <td>₹{{ item.total_amount }}</td>
+                <td>${{ item.total_amount }}</td>
             </tr>
             {% endfor %}
             <tr class="total">
                 <td colspan="6" style="text-align: right;">Total:</td>
-                <td>₹{{ total_amount }}</td>
+                <td>${{ total_amount }}</td>
             </tr>
         </table>
-        
-        <div class="signature">
-            For {{ seller_details.name }}:<br>
-            <img src="{{ signature }}" style="width:100px;"><br>
-            Authorised Signatory
-        </div>
     </div>
 </body>
 </html>

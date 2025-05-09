@@ -1,0 +1,35 @@
+seller_details:
+  name: "Étoile Consulting S.à.r.l."
+  address: "42 Rue de l'Innovation"
+  city: "París"
+  pincode: "75008"
+  country: "France"
+
+billing_details:
+  name: "株式会社グローバル・テクノロジー"
+  address: "東京都渋谷区神宮前5-53-67"
+  city: "東京"
+  state: ""
+  pincode: "150-0001"
+  country: "日本"
+
+invoice_details:
+  invoice_no: "FORMAT-001"
+  invoice_date: "2025-05-13"
+
+items:
+  - description: "システム分析 (System Analysis)"
+    unit_price: 15000
+    quantity: 1
+    discount: 1500
+    tax_rate: 10
+  - description: "Web アプリ「素晴らしい」開発"
+    unit_price: 4500
+    quantity: 3
+    discount: 500
+    tax_rate: 10
+  - description: "Support & Maintenance (24/7)"
+    unit_price: 2000
+    quantity: 6
+    discount: 600
+    tax_rate: 10
