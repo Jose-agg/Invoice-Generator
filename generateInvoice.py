@@ -15,7 +15,10 @@ def generate_invoice(seller_details, billing_details, invoice_details, items, ou
     # Calculate derived parameters
     for item in items:
         item['net_amount'] = item['unit_price'] * item['quantity'] - item['discount']
-        item['tax_amount'] = item['net_amount'] / item['tax_rate']
+        if item['tax_rate'] == 0:
+            item['tax_amount'] = 0
+        else:
+            item['tax_amount'] = item['net_amount'] * (item['tax_rate'] / 100)  # Assuming tax_rate is a percentage
         item['total_amount'] = item['net_amount'] + item['tax_amount']
     
     total_amount = sum(item['total_amount'] for item in items)
