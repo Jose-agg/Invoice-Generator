@@ -14,17 +14,22 @@ billing_details:
   country: "United States"
 
 invoice_details:
-  invoice_no: "INV-002"
-  invoice_date: "2025-07-01"
+  invoice_no: "EDGE-001"
+  invoice_date: "2025-05-12"
 
 items:
-  - description: "Business Strategy Consultation - Hourly"
-    unit_price: 120
+  - description: "Zero Price Item"
+    unit_price: 0
     quantity: 10
     discount: 0
     tax_rate: 10
-  - description: "AAAAAAAAAAAAAAAA"
-    unit_price: 1
+  - description: "Very Large Quantity Item"
+    unit_price: 5
+    quantity: 10000
+    discount: 5000
+    tax_rate: 10
+  - description: "High Value Item with Full Discount"
+    unit_price: 9999.99
     quantity: 1
-    discount: 0
+    discount: 9999.99
     tax_rate: 10
