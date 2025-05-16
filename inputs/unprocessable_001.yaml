@@ -1,9 +1,9 @@
 seller_details:
-  name: "Yet a New Vendor"
-  address: "Invented Avenue 1"
-  city: "Invented City"
-  pincode: "12345"
-  country: "Denmark"
+  name: ""
+  address: ""
+  city: ""
+  pincode: ""
+  country: ""
 
 billing_details:
   name: "Cronus International Ltd."
@@ -14,7 +14,7 @@ billing_details:
   country: "United States"
 
 invoice_details:
-  invoice_no: "DATA-002"
+  invoice_no: "ERROR-001"
   invoice_date: "2025-07-01"
 
 items:
