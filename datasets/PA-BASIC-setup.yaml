@@ -1,0 +1,27 @@
+test_setup:
+  vendorsToCreate:
+  - name: Strauss Consulting
+    address: Max-Joseph-Platz 2
+    city: München
+    postCode: 80539
+    countryCode: DE
+  - name: Bach Organ Works Ltd.
+    address: Thomaskirche
+    city: Leipzig
+    postCode: 04109
+    countryCode: DE
+  - name: Mozart Symphony Orchestra
+    address: Salzburger Dom
+    city: Salzburg
+    postCode: 5020
+    countryCode: AT
+  - name: Beethoven Piano Innovations
+    address: Theater an der Wien
+    city: Vienna
+    postCode: 1060
+    countryCode: AT
+  - name: Chopin Music Academy
+    address: Salle Pleyel
+    city: Paris
+    postCode: 75008
+    countryCode: FR
