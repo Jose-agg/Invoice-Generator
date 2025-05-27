@@ -1,0 +1,687 @@
+tests:
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_01
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_001.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-001"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_02
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_002.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-002"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_03
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_003.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-003"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_04
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_004.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-004"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_05
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_005.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-005"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_06
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_006.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-006"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_07
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_007.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-007"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_08
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_008.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-008"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_09
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_009.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-009"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_10
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_010.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-010"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_11
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_011.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-011"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_12
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_012.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-012"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_13
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_013.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-013"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_14
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_014.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-014"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_15
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_015.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-015"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_16
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_016.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-016"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_17
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_017.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-017"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_18
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_018.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-018"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_19
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_019.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-019"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_20
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_020.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-020"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_22
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_022.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-022"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_23
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_023.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-023"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_24
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_024.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-024"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_25
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_025.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-025"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_26
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_026.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-026"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_27
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_027.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-027"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_28
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_028.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-028"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_29
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_029.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-029"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_30
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_030.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-030"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_31
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_031.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-031"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_32
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_032.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-032"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_33
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_033.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-033"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_34
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_034.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-034"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_35
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_035.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-035"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_36
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_036.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-036"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_37
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_037.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-037"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_38
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_038.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-038"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_39
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_039.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-039"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_40
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_040.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-040"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_41
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_041.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-041"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_42
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_042.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-042"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_43
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_043.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-043"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_44
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_044.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-044"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_45
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_045.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-045"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_46
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_046.pdf
+  expected_data:
+    vendor:
+      name: Strauss Consulting
+      address: Max-Joseph-Platz 2
+      city: München
+      postCode: 80539
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-046"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_47
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_047.pdf
+  expected_data:
+    vendor:
+      name: Bach Organ Works Ltd.
+      address: Thomaskirche
+      city: Leipzig
+      postCode: 04109
+      countryCode: DE
+    purchaseHeader:
+      invoiceNumber: "INV-047"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_48
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_048.pdf
+  expected_data:
+    vendor:
+      name: Mozart Symphony Orchestra
+      address: Salzburger Dom
+      city: Salzburg
+      postCode: 5020
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-048"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_49
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_049.pdf
+  expected_data:
+    vendor:
+      name: Beethoven Piano Innovations
+      address: Theater an der Wien
+      city: Vienna
+      postCode: 1060
+      countryCode: AT
+    purchaseHeader:
+      invoiceNumber: "INV-049"
+- test_setup: PA-BASIC-setup.yaml
+  name: INVOICE_PROCESSING_50
+  description: Process an invoice PDF for a known vendor where all lines are populated.
+  query:
+    file: example_050.pdf
+  expected_data:
+    vendor:
+      name: Chopin Music Academy
+      address: Salle Pleyel
+      city: Paris
+      postCode: 75008
+      countryCode: FR
+    purchaseHeader:
+      invoiceNumber: "INV-050"
